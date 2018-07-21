@@ -8,7 +8,7 @@ class GeneralController extends Controller
 {
 
     public function subscribe(Request $request) {
-        dd($request->all());
+        return view('register');
     }
     /**
      * Display a listing of the resource.
