@@ -11,6 +11,13 @@ class PlansTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $faker = Faker\Factory::create();
+
+        for($i = 0; $i < 1000; $i++) {
+            App\User::create([
+                'name' => $faker->name,
+                'amount' => $faker->email
+            ]);
+        }
     }
 }
