@@ -25,6 +25,7 @@ class CreateSubscribersTable extends Migration
             $table->string('region')->nullable();
             $table->integer('postal_code');
             $table->string('country');
+            $table->string('credit_card_type');
             $table->integer('credit_card_number')->unique();
             $table->integer('month');
             $table->integer('year');
