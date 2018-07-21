@@ -14,7 +14,7 @@ class SubscriptionsTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for($i = 0; $i < 30; $i++) {
+        for($i = 0; $i < 15; $i++) {
             Subscription::create([
                 'plan_id' => $faker->numberBetween($min = 1, $max = 4),
                 'subscriber_id' => $faker->unique()->numberBetween($min = 1, $max = 50),
