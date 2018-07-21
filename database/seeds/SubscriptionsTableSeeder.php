@@ -11,6 +11,15 @@ class SubscriptionsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $faker = Faker\Factory::create();
+
+        for($i = 0; $i < 30; $i++) {
+            App\User::create([
+                'plan_id' => $faker->numberBetween($min = 1, $max = 4),
+                'subscriber_id' => $faker->unique()->numberBetween($min = 1, $max = 50),
+                'active' => $faker->boolean($chanceOfGettingTrue = 50)
+            ]);
+        }
     }
 }
+
