@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(SubDomainsTableSeeder::class);
-        $this->call(SubscriptionsTableSeeder::class);
         $this->call(SubscribersTableSeeder::class);
     }
 }

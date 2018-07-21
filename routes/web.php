@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'GeneralController@index');
+Route::post('/subscription/subscribe', 'GeneralController@subscribe');
 
 

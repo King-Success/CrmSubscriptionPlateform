@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class GeneralController extends Controller
 {
+
+    public function subscribe(Request $request) {
+        dd($request->all());
+    }
     /**
      * Display a listing of the resource.
      *
@@ -34,7 +38,7 @@ class GeneralController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

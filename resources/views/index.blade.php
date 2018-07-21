@@ -201,16 +201,22 @@
                                 </div>
                                 <div class="price">
                                     <div class="price-container d-flex align-items-end justify-content-center">
-                                        <h4 class="h1"><span class="currency">$</span>7</h4><span class="period">/ month</span>
+                                        <h4 class="h1"><span class="currency">$</span>12</h4><span class="period">/ month</span>
                                     </div>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-check"></i>100GB Storage</li>
-                                    <li><i class="fa fa-check"></i>Own config file</li>
-                                    <li><i class="fa fa-times"></i>Sharing Tools</li>
-                                    <li><i class="fa fa-times"></i>Auto Backup</li>
-                                    <li><i class="fa fa-times"></i>Extended Security</li>
-                                </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                                <form action="/subscription/subscribe" method="POST">
+                                    {{csrf_field() }}
+                                    <input type="hidden" name="plan_id" value="4">
+                                    <input type="hidden" name="plan" value="basic">
+                                    <input type="hidden" name="amount" value="12">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check"></i>Per user/month billed annually</li>
+                                        <li><i class="fa fa-times"></i>Plus tax, as applicable</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                    </ul>
+                                    <input type="submit" class="btn btn-template-outlined" value="Subscribe">
+                                </form>
                             </div>
                         </div>
                         <!-- / END FIRST PACKAGE-->
@@ -221,16 +227,22 @@
                                 </div>
                                 <div class="price">
                                     <div class="price-container d-flex align-items-end justify-content-center">
-                                        <h4 class="h1"><span class="currency">$</span>21</h4><span class="period">/ month</span>
+                                        <h4 class="h1"><span class="currency">$</span>25</h4><span class="period">/ month</span>
                                     </div>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-check"></i>100GB Storage</li>
-                                    <li><i class="fa fa-check"></i>Own config file</li>
-                                    <li><i class="fa fa-times"></i>Sharing Tools</li>
-                                    <li><i class="fa fa-times"></i>Auto Backup</li>
-                                    <li><i class="fa fa-times"></i>Extended Security</li>
-                                </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                                <form action="/subscription/subscribe" method="POST">
+                                    {{csrf_field() }}
+                                    <input type="hidden" name="plan_id" value="3">
+                                    <input type="hidden" name="plan" value="standard">
+                                    <input type="hidden" name="amount" value="25">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check"></i>Per user/month billed annually</li>
+                                        <li><i class="fa fa-times"></i>Plus tax, as applicable</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                    </ul>
+                                    <input type="submit" class="btn btn-template-outlined" value="Subscribe">
+                                </form>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -242,15 +254,21 @@
                                     </div>
                                 </div>
                                 <div class="price-container d-flex align-items-end justify-content-center">
-                                    <h4 class="h1"><span class="currency">$</span>53</h4><span class="period">/ month</span>
+                                    <h4 class="h1"><span class="currency">$</span>50</h4><span class="period">/ month</span>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-check"></i>100GB Storage</li>
-                                    <li><i class="fa fa-check"></i>Own config file</li>
-                                    <li><i class="fa fa-times"></i>Sharing Tools</li>
-                                    <li><i class="fa fa-times"></i>Auto Backup</li>
-                                    <li><i class="fa fa-times"></i>Extended Security</li>
-                                </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                                <form action="/subscription/subscribe" method="POST">
+                                    {{csrf_field() }}
+                                    <input type="hidden" name="plan_id" value="2">
+                                    <input type="hidden" name="plan" value="premium">
+                                    <input type="hidden" name="amount" value="50">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check"></i>Per user/month billed annually</li>
+                                        <li><i class="fa fa-times"></i>Plus tax, as applicable</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                    </ul>
+                                    <input type="submit" class="btn btn-template-outlined" value="Subscribe">
+                                </form>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -259,15 +277,21 @@
                                     <h5>Ultimate</h5>
                                 </div>
                                 <div class="price-container d-flex align-items-end justify-content-center">
-                                    <h4 class="h1"><span class="currency">$</span>99</h4><span class="period">/ month</span>
+                                    <h4 class="h1"><span class="currency">$</span>100</h4><span class="period">/ month</span>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-check"></i>100GB Storage</li>
-                                    <li><i class="fa fa-check"></i>Own config file</li>
-                                    <li><i class="fa fa-times"></i>Sharing Tools</li>
-                                    <li><i class="fa fa-times"></i>Auto Backup</li>
-                                    <li><i class="fa fa-times"></i>Extended Security</li>
-                                </ul><a href="#" class="btn btn-template-outlined">Sign Up</a>
+                                <form action="/subscription/subscribe" method="POST">
+                                    {{csrf_field() }}
+                                    <input type="hidden" name="plan_id" value="1">
+                                    <input type="hidden" name="plan" value="ultimate">
+                                    <input type="hidden" name="amount" value="100">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check"></i>Per user/month billed annually</li>
+                                        <li><i class="fa fa-times"></i>Plus tax, as applicable</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                        <li><i class="fa fa-times"></i>lorem</li>
+                                    </ul>
+                                    <input type="submit" class="btn btn-template-outlined" value="Subscribe">
+                                </form>
                             </div>
                         </div>
                     </div>
