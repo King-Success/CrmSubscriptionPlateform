@@ -15,6 +15,20 @@ class CreateSubscribersTable extends Migration
     {
         Schema::create('subscribers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email')->unique();
+            $table->string('company');
+            $table->string('address_1');
+            $table->string('address_2')->nullable();
+            $table->string('city');
+            $table->string('region')->nullable();
+            $table->integer('postal_code');
+            $table->string('country');
+            $table->integer('credit_card_number')->unique();
+            $table->integer('month');
+            $table->integer('year');
+            $table->integer('cvv2');
             $table->timestamps();
         });
     }
