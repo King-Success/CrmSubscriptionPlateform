@@ -23,7 +23,7 @@ class CreateSubscribersTable extends Migration
             $table->string('address_2')->nullable();
             $table->string('city');
             $table->string('region')->nullable();
-            $table->integer('postal_code');
+            $table->string('postal_code');
             $table->string('country');
             $table->timestamps();
         });

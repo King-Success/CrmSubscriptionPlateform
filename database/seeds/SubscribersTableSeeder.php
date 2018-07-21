@@ -23,9 +23,9 @@ class SubscribersTableSeeder extends Seeder
                 'address_1' => $faker->address,
                 'address_2' => $faker->address,
                 'city' => $faker->city,
-//                'region' => $faker->unique()->numberBetween($min = 1, $max = 50),
+                'region' => $faker->city,
                 'postal_code' => $faker->postcode,
-                'country' => $faker->country,
+                'country' => $faker->country
 
             ]);
         }
