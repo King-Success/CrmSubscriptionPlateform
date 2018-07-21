@@ -11,19 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GeneralController@index');
 
-Route::get('/payment', function() {
-    return view('payment');
-});
-
-Route::get('/index', function() {
-    return view('index');
-});
-
-Route::get('/register', function(){
-    return view ('register');
-});
 
