@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Subscriber;
+use App\Subscription;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use PHPUnit\Framework\Constraint\ExceptionMessageTest;
 
 class GeneralController extends Controller
 {
@@ -13,8 +18,26 @@ class GeneralController extends Controller
     }
 
     public function checkout(Request $request) {
-        dd($request->all());
+         try {
+             $subscriber = Subscriber::create($request->except('plan_id', 'plan', '_token', 'amount', 'payment_method',
+                 'card_holder', 'card_number', 'expiration', 'cvv'));
+         }catch(QueryException $e){
+//             return Redirect::to('/subscription/subscribe');
+             dd($e->getMessage());
+         }
+
+//        hand over payment to paystack to handle
+
+          $plan_id = $request->plan_id;
+          $subscriber_id = $subscriber->id;
+          $active = true;
+          $subscriptionArray = ['plan_id' => $plan_id, 'subscriber_id' => $subscriber_id, 'active' => $active];
+          $subscription = Subscription::create($subscriptionArray);
+          dd($subscription);
+
+
     }
+
     /**
      * Display a listing of the resource.
      *

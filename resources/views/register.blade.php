@@ -126,7 +126,6 @@
     </header>
 </div>
 <!-- Navbar End-->
-
 <div class="container">
     <form action="/subscription/checkout" method="POST">
         {{csrf_field() }}
@@ -140,15 +139,15 @@
 
             <div class="d-block my-3">
                 <div class="custom-control custom-radio">
-                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" value="credit_card" checked required>
+                    <input id="credit" name="payment_method" type="radio" class="custom-control-input" value="credit_card" checked required>
                     <label class="custom-control-label" for="credit">Credit card</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" value="debit_card" required>
+                    <input id="debit" name="payment_method" type="radio" class="custom-control-input" value="debit_card" required>
                     <label class="custom-control-label" for="debit">Debit card</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" value="paypal" required>
+                    <input id="paypal" name="payment_method" type="radio" class="custom-control-input" value="paypal" required>
                     <label class="custom-control-label" for="paypal">Paypal</label>
                 </div>
             </div>
@@ -191,14 +190,14 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">First name</label>
-                        <input type="text" name="first_name" class="form-control" id="firstName" placeholder="" value="" required>
+                        <input type="text" name="firstname" class="form-control" id="firstName" placeholder="" value="" required>
                         <div class="invalid-feedback">
                             Valid first name is required.
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Last name</label>
-                        <input type="text" name="last_name" class="form-control" id="lastName" placeholder="" value="" required>
+                        <input type="text" name="lastname" class="form-control" id="lastName" placeholder="" value="" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
