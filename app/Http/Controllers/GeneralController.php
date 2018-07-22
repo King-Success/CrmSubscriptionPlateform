@@ -8,7 +8,12 @@ class GeneralController extends Controller
 {
 
     public function subscribe(Request $request) {
-        return view('register');
+        return view('register')
+                    ->with('plan', $request->all());
+    }
+
+    public function checkout(Request $request) {
+        dd($request->all());
     }
     /**
      * Display a listing of the resource.

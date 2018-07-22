@@ -190,7 +190,7 @@
                         <h2>Packages we offer</h2>
                     </div>
                     <div class="text-center">
-                        <i class="btn btn-danger btn-lg" style="border-radius: 10px;">Free Trial</i>
+                        <i class="btn btn-primary btn-lg" style="border-radius: 10px;">Free Trial</i>
                     </div>
                     <!-- Packages Start-->
                     <div class="row packages">

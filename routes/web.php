@@ -13,5 +13,6 @@
 
 Route::get('/', 'GeneralController@index');
 Route::post('/subscription/subscribe', 'GeneralController@subscribe');
+Route::post('/subscription/checkout', 'GeneralController@checkout');
 
 
