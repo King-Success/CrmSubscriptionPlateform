@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Plan;
 use App\Subscriber;
 use App\Subscription;
 use Illuminate\Database\QueryException;
@@ -12,31 +13,32 @@ use PHPUnit\Framework\Constraint\ExceptionMessageTest;
 class GeneralController extends Controller
 {
 
-    public function subscribe(Request $request) {
+    public function subscribe(Request $request)
+    {
         return view('register')
-                    ->with('plan', $request->all());
+            ->with('plan', $request->all());
     }
 
-    public function checkout(Request $request) {
-         try {
-             $subscriber = Subscriber::create($request->except('plan_id', 'plan', '_token', 'amount', 'payment_method',
-                 'card_holder', 'card_number', 'expiration', 'cvv'));
-         }catch(QueryException $e){
-//             return Redirect::to('/subscription/subscribe');
-             dd($e->getMessage());
-         }
+    public function checkout(Request $request)
+    {
 
-//        hand over payment to paystack to handle
+        $subscriber = Subscriber::create($request->except('plan_id', 'plan', '_token', 'amount', 'payment_method',
+                'card_holder', 'card_number', 'expiration', 'cvv'));
 
-          $plan_id = $request->plan_id;
-          $subscriber_id = $subscriber->id;
-          $active = true;
-          $subscriptionArray = ['plan_id' => $plan_id, 'subscriber_id' => $subscriber_id, 'active' => $active];
-          $subscription = Subscription::create($subscriptionArray);
-          dd($subscription);
+        $email = $request->email;
+        $plan = Plan::find($request->plan_id);
+        $cost = $plan->cost;
+        $amount = $cost * 360;
 
+        $data = ['email' => $email, 'amount' => $amount];
+        return view('paystack')
+                ->with('data', $data);
 
     }
+
+public function pay() {
+        return view('paystack');
+}
 
     /**
      * Display a listing of the resource.
